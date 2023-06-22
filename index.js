@@ -140,11 +140,13 @@ console.log(DegerlendirmeEkle(degerlendirmeler, "Hurşut", 2, "Boktan yemekler!"
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+
+function AnahtardanDegerlendirmeAl(dizip, indexp) {
+	const a = degerlendirmeler[indexp].isim + " isimli kişi " + degerlendirmeler[indexp].puan + " puan verdi ve şunları yazdı: " + degerlendirmeler[indexp].geribildirim;
+	return a;
 
 }
-
+console.log(AnahtardanDegerlendirmeAl(degerlendirmeler, 0))
 
 
 /*  Görev 7:  
