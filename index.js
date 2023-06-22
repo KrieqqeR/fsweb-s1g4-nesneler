@@ -2,8 +2,8 @@
 /*Bu görevleri yaparken çıktıların doğru çalıştığını kontrol etmeniz için console.log'u sıklıkla kullanmanızı tavsiye ediyoruz.*/
 
 ///////////////Menu Elemanları ///////////////////
-const cay = {isim: "Çay", fiyat: 4, kategori: "İçecekler"};
-const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı"};
+const cay = { isim: "Çay", fiyat: 4, kategori: "İçecekler" };
+const serpmeKahvalti = { isim: "Serpme Kahvaltı", fiyat: 16, kategori: "Kahvaltı" };
 
 /* Görev 1a: Nesneler döndüren bir fonksiyon yazın
 	Aşağıdaki MenuElemaniOlustur fonksiyonunu, yukarıda gördüğünüz cay ve serpmeKahvalti (isim, fiyat, kategori) nesnelerini oluşturacak şekilde yazın. 
@@ -15,9 +15,18 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 */
 
 
-function MenuElemaniOlustur(/*Kodlar buraya*/){
-	/*Kodlar buraya*/
+
+function MenuElemaniOlustur(aIsim, aFiyat, aKategori) {
+	const menuEl = {
+		isim: aIsim,
+		fiyat: aFiyat,
+		kategori: aKategori,
+	};
+	return menuEl;
 }
+MenuElemaniOlustur("Cheeseburger", 8, "Burgerler")
+
+
 
 
 
@@ -47,9 +56,9 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 
 
 const burger = {
-	isim: "Burger", 
-	fiyat: 18, 
-	kategori: "Öğle Yemeği", 
+	isim: "Burger",
+	fiyat: 18,
+	kategori: "Öğle Yemeği",
 
 }
 
@@ -57,14 +66,14 @@ const burger = {
 
 ///////////////Değerlendirmeler (MVP)///////////////////
 const degerlendirmeler = [
-    {isim: "Nalan", puan: 5, geribildirim:"Mükemmel atmosfer ve mükemmel vegan seçenekleri!"},
-    {isim: "Kuddusi", puan: 3, geribildirim:"Benim zevkime göre biraz fazla yenilikçi, burger iyi ama fiyatı yüksek"},
-    {isim: "Kamuran", puan: 4, geribildirim:"eğlenceli bilgiler ve havalı hisler"},
-    {isim: "Elif", puan: 4.5, geribildirim:"Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim."},
-    {isim: "Pınar", puan: 3, geribildirim: "atıştırmalıklar harika ve gün içinde çalışmak için güzel bir cafe alanı."},
-    {isim: "Ahmet", puan: 2, geribildirim: "Bu mekan beni fazla etkilemedi. Menüde özel bir şey yok ve çok pahalı. Atmosferi de ben beğenmedim ama başkaları beğenebilir." },
-    {isim: "Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."},
-    {isim: "Reyna", puan: 3.5, geribildirim: ""},
+	{ isim: "Nalan", puan: 5, geribildirim: "Mükemmel atmosfer ve mükemmel vegan seçenekleri!" },
+	{ isim: "Kuddusi", puan: 3, geribildirim: "Benim zevkime göre biraz fazla yenilikçi, burger iyi ama fiyatı yüksek" },
+	{ isim: "Kamuran", puan: 4, geribildirim: "eğlenceli bilgiler ve havalı hisler" },
+	{ isim: "Elif", puan: 4.5, geribildirim: "Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim." },
+	{ isim: "Pınar", puan: 3, geribildirim: "atıştırmalıklar harika ve gün içinde çalışmak için güzel bir cafe alanı." },
+	{ isim: "Ahmet", puan: 2, geribildirim: "Bu mekan beni fazla etkilemedi. Menüde özel bir şey yok ve çok pahalı. Atmosferi de ben beğenmedim ama başkaları beğenebilir." },
+	{ isim: "Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi." },
+	{ isim: "Reyna", puan: 3.5, geribildirim: "" },
 ]
 
 /*  Görev 3 (ototest yok):  
@@ -94,9 +103,9 @@ const degerlendirmeler = [
 */
 
 
-function DegerlendirmeEkle(/*Kodlar buraya */){
+function DegerlendirmeEkle(/*Kodlar buraya */) {
 	/*Kodlar buraya */
-	
+
 }
 
 
@@ -134,7 +143,7 @@ function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
 
 function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
 	/*Kodlar buraya*/
-} 
+}
 
 
 
@@ -148,14 +157,14 @@ function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
 	
 	Örnek: PuanaGoreDegerlendirmeAl(degerlendirmeler, 4) 4 ile 4.9 puan aralığındaki tüm değerlendirmeleri döndürecek :
 	[
-    {isim: "Kamuran", puan: 4, geribildirim:"eğlenceli bilgiler ve havalı hisler},
-    {isim: "Elif", puan: 4.5, geribildirim:"Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim."},
-    {isim:"Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."}
+	{isim: "Kamuran", puan: 4, geribildirim:"eğlenceli bilgiler ve havalı hisler},
+	{isim: "Elif", puan: 4.5, geribildirim:"Evimden pek çıkmıyorum ama çıktığımda sadece buraya geliyorum. Şiddetle tavsiye ederim."},
+	{isim:"Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."}
 	]
 */
 
 function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+	/* Kodlar buraya */
 }
 
 
@@ -167,7 +176,7 @@ function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
 */
 
 function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+	/* Kodlar buraya */
 }
 
 
@@ -190,13 +199,13 @@ function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
 
 
 function arabaYapici(/* Kodlar buraya */) {
-    /* Kodlar buraya */
-    
+	/* Kodlar buraya */
+
 }
 
 
 /*  Buradan aşağıdaki kodları değiştirmeyin lütfen */
-function sa(){
+function sa() {
 	console.log('Kodlar çalışıyor');
 	return 'as';
 }
