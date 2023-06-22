@@ -59,8 +59,15 @@ const burger = {
 	isim: "Burger",
 	fiyat: 18,
 	kategori: "Öğle Yemeği",
-
+	indirim: function (stringDeger) {
+		if (stringDeger === "öğretmen" || stringDeger === "öğrenci") {
+			return 13.5
+		} else if (stringDeger === "diğer") {
+			return 16.2
+		}
+	}
 }
+console.log(burger.indirim("öğretmen"))
 
 
 
@@ -103,11 +110,23 @@ const degerlendirmeler = [
 */
 
 
-function DegerlendirmeEkle(/*Kodlar buraya */) {
-	/*Kodlar buraya */
 
+function DegerlendirmeEkle(degerlendirmeler, isimf, puanf, geribildirimf) {
+	const yeniDeğerlendirme = {
+		isim: "",
+		puan: undefined,
+		geribildirim: ""
+	}
+
+	yeniDeğerlendirme.isim = isimf;
+	yeniDeğerlendirme.puan = puanf;
+	yeniDeğerlendirme.geribildirim = geribildirimf;
+
+	degerlendirmeler.push(yeniDeğerlendirme);
+
+	return degerlendirmeler;
 }
-
+console.log(DegerlendirmeEkle(degerlendirmeler, "Hurşut", 2, "Boktan yemekler!"))
 
 
 /*  Görev 6: 
