@@ -80,7 +80,7 @@ const degerlendirmeler = [
 	{ isim: "Pınar", puan: 3, geribildirim: "atıştırmalıklar harika ve gün içinde çalışmak için güzel bir cafe alanı." },
 	{ isim: "Ahmet", puan: 2, geribildirim: "Bu mekan beni fazla etkilemedi. Menüde özel bir şey yok ve çok pahalı. Atmosferi de ben beğenmedim ama başkaları beğenebilir." },
 	{ isim: "Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi." },
-	{ isim: "Reyna", puan: 3.5, geribildirim: "" },
+	{ isim: "Reyna", puan: 3.5, geribildirim: "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım" },
 ]
 
 /*  Görev 3 (ototest yok):  
@@ -142,7 +142,7 @@ console.log(DegerlendirmeEkle(degerlendirmeler, "Hurşut", 2, "Boktan yemekler!"
 
 
 function AnahtardanDegerlendirmeAl(dizip, indexp) {
-	const a = degerlendirmeler[indexp].isim + " isimli kişi " + degerlendirmeler[indexp].puan + " puan verdi ve şunları yazdı: " + degerlendirmeler[indexp].geribildirim;
+	const a = dizip[indexp].isim + " isimli kişi " + dizip[indexp].puan + " puan verdi ve şunları yazdı: " + dizip[indexp].geribildirim;
 	return a;
 
 }
@@ -162,10 +162,15 @@ console.log(AnahtardanDegerlendirmeAl(degerlendirmeler, 0))
 */
 
 
-function SonDegerlendirmeyiAl(degerlendirmeler) {
+function SonDegerlendirmeyiAl(g7Dizi) {
 
+	const lastIndex = g7Dizi.length - 1;
+
+	const b = g7Dizi[lastIndex].isim + " isimli kişi " + g7Dizi[lastIndex].puan + " puan verdi ve şunları yazdı: " + g7Dizi[lastIndex].geribildirim;
+
+	return b;
 }
-
+console.log(SonDegerlendirmeyiAl(degerlendirmeler))
 
 
 /////////////// BONUS  GÖRVLER////////////////////
