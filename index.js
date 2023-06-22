@@ -162,8 +162,8 @@ console.log(AnahtardanDegerlendirmeAl(degerlendirmeler, 0))
 */
 
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function SonDegerlendirmeyiAl(degerlendirmeler) {
+
 }
 
 
